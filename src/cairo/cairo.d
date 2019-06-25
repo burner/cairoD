@@ -40,10 +40,6 @@ import std.format : formattedWrite;
 import std.string : toStringz;
 import std.typecons;
 
-debug(RefCounted)
-{
-    import std.stdio;
-}
 
 /**
  * Mainly used internally by cairoD.
@@ -2546,6 +2542,8 @@ class ImageSurface : Surface
  */
 struct Context
 {
+	import std.stdio;
+
     /*---------------------------Reference counting stuff---------------------------*/
     protected:
         @property uint _count()
